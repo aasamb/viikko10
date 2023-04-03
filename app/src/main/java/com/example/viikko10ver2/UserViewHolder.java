@@ -18,7 +18,7 @@ public class UserViewHolder extends RecyclerView.ViewHolder {
         email  = itemView.findViewById(R.id.txtEmail);
         studyField  = itemView.findViewById(R.id.txtStudyField);
         degrees = itemView.findViewById(R.id.tvDegrees);
-        degreesHeader = itemView.findViewById(R.id.tvDegreesHeader);
+        //degreesHeader = itemView.findViewById(R.id.tvDegreesHeader);
     }
 
 

@@ -2,6 +2,7 @@ package com.example.viikko10ver2;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -32,10 +33,11 @@ public class UserListAdapter extends RecyclerView.Adapter<UserViewHolder> {
         holder.studyField.setText(users.get(position).getDegreeProgram());
         holder.userImage.setImageResource(users.get(position).getImage());
         if (users.get(position).getDegrees().size() > 0)    {
-            System.out.println(holder.fullName.getText() + ": " + ((users.get(position).getDegrees() == null) ? "Null" : "Ei null"));
-            System.out.println(holder.fullName.getText() + ": " + users.get(position).getDegrees().size());
-            holder.degreesHeader.setText("Tutkinnot: ");
-            StringBuilder sbDegrees = new StringBuilder();
+            holder.degrees.setVisibility(View.VISIBLE);
+            //System.out.println(holder.fullName.getText() + ": " + ((users.get(position).getDegrees() == null) ? "Null" : "Ei null"));
+            //System.out.println(holder.fullName.getText() + ": " + users.get(position).getDegrees().size());
+            //holder.degreesHeader.setText("Tutkinnot: ");
+            StringBuilder sbDegrees = new StringBuilder("Tutkinnot:\n");
             for (String degree : users.get(position).getDegrees()) {
                 sbDegrees.append("- " + degree + "\n");
             }
