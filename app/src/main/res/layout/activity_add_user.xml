@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddUserActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".AddUserActivity">
+
+        <EditText
+            android:id="@+id/editFirstName"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Etunimi"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editLastName"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Sukunimi"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editFirstName" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Sähköpostiosoite"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editLastName" />
+
+        <RadioGroup
+            android:id="@+id/rgStudyField"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editEmail">
+
+            <RadioButton
+                android:id="@+id/rbEnTe"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Energiatekniikka" />
+
+            <RadioButton
+                android:id="@+id/rbLaTe"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Laskennallinen tekniikka" />
+
+            <RadioButton
+                android:id="@+id/rbSäTe"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Sähkötekniikka" />
+
+            <RadioButton
+                android:id="@+id/rbTiTe"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Tietotekniikka" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvImageSelect"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Valitse käyttäjälle kuva:"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgStudyField">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Suoritetut tutkinnot"
+                android:textColor="@android:color/black"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/cbKandi"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="0dp"
+                android:text="Kandidaatin tutkinto" />
+
+            <CheckBox
+                android:id="@+id/cbDi"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:text="Diplomi-insinöörin tutkinto" />
+
+            <CheckBox
+                android:id="@+id/cbTkt"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:text="Tekniikan tohtorin tutkinto" />
+
+            <CheckBox
+                android:id="@+id/cbUimamaisteri"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:text="Uimamaisteri" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rgImageSelect"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="fill_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvImageSelect"
+            app:layout_constraintVertical_weight="1">
+
+            <RadioButton
+                android:id="@+id/rbKirby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" />
+
+            <RadioButton
+                android:id="@+id/rbLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/rbLuigi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/rbMario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:id="@+id/rbNoImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/linLayRbNames"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="fill_horizontal|center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgImageSelect">
+
+            <TextView
+                android:id="@+id/tvKirby"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kirby"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvLink"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Link"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvLuigi"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Luigi"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvMario"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mario"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvNoImage"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ei kuvaa"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linLaySelectableImages">
+
+            <TextView
+                android:id="@+id/tvKirby2"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kirby"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvLink2"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Link"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvLuigi2"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Luigi"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvMario2"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mario"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linLaySelectableImages"
+            android:layout_width="300dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linLayRbNames">
+
+            <ImageView
+                android:id="@+id/ivKirby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/kirby" />
+
+            <ImageView
+                android:id="@+id/ivLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/link" />
+
+            <ImageView
+                android:id="@+id/ivLuigi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/luigi" />
+
+            <ImageView
+                android:id="@+id/ivMario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/mario" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnAddUser"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:onClick="addUser"
+            android:text="Lisää käyttäjä"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
